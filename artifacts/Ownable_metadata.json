@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Counter1.sol": "Ownable"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Counter1.sol": {
+			"keccak256": "0x234672603dc52abbd5d7c4c91e10880c7a19cf9a2dd308db54a459c75a117439",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://77d220afb59b43c7b42708f1e1fccd25c0516b7738764d9380123a0bf32e797e",
+				"dweb:/ipfs/QmUniXDm5mpzjR82Sy4JAeq8RjqLDRtWiNdgv7yoDBt7r9"
+			]
+		}
+	},
+	"version": 1
+}
