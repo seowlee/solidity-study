@@ -1,0 +1,184 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "Registered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "Updated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "names",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "resolve",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_newAddress",
+						"type": "address"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"register(string,address)": {
+					"params": {
+						"_address": "등록할 이더리움 주소",
+						"_name": "도메인 이름 (예: \"seowoo.eth\")"
+					}
+				},
+				"resolve(string)": {
+					"params": {
+						"_name": "조회할 도메인 이름"
+					},
+					"returns": {
+						"_0": "이더리움 주소"
+					}
+				}
+			},
+			"title": "간단한 ENS 네임 서비스 컨트랙트 예제",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"register(string,address)": {
+					"notice": "도메인 이름을 이더리움 주소에 등록"
+				},
+				"resolve(string)": {
+					"notice": "도메인 주소 반환"
+				},
+				"update(string,address)": {
+					"notice": "기존 도메인에 대한 주소를 변경 (소유자만 가능하도록 하지 않음) 향후 이 기능은 소유자만 접근 가능하도록 권한 제한 필요"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ENS.sol": "ENS"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ENS.sol": {
+			"keccak256": "0xc3715d6484097dbb986293bd1c1bbb22afb5bcf9942f38877e5a2dbb82276e0c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53390d756ab152792f4fa00ba9bb52bf76547d2622ae74df194c480ee369fbb7",
+				"dweb:/ipfs/QmSYwsm3E6oB1vmFuHfAky4fXfXXbw3NmxfkawZjQaWafu"
+			]
+		}
+	},
+	"version": 1
+}

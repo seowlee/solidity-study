@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "setBlacklist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MappingBlacklist.sol": "MappingsBlacklist"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"MappingBlacklist.sol": {
+			"keccak256": "0x908fa3f3d0efdebb98f54df164978d672b3b0d7144b502264a83bd84cbb7cea9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://739a2da1eb08b2867afb8eece1822601418bd23185893d47502774f370f137f1",
+				"dweb:/ipfs/QmTyzqB1GSvKcfabL8iLtKhY4HBjhrNR7Ag9hjj8feHYvj"
+			]
+		}
+	},
+	"version": 1
+}
