@@ -1,89 +1,78 @@
-# ------------------------------------------------------------------------------
-# ✅ Remix IDE 프로젝트 .gitignore (최종 완성 버전)
-# ------------------------------------------------------------------------------
+# =====================================================
+# ✅ Solidity + Remix + VSCode 프로젝트용 .gitignore
+# =====================================================
 
-# 📦 컴파일 결과물 (Solidity artifacts, cache)
+# 👉 Remix 상태 파일 (로컬 VM 상태 저장)
+.states/
+
+# 👉 Remix 또는 Hardhat/Foundry 빌드 결과물
 artifacts/
 cache/
-bin/
 build/
 
-# 📦 Remix 플러그인 의존성 캐시 (npm 다운받은 파일들 포함)
-.deps/
+# 👉 ABI 따로 저장하지 않는다면 포함하지 않음
+*.abi.json
+*.bin
 
-# 📦 Remixd 공유 파일 (로컬 파일 공유용)
-remixd-files/
-
-# 📦 자동 생성 파일 (컴파일/배포 후 생김)
-*.json
-*.db
-*.log
-*.pid
-*.bak
-*.backup
-*.old
-*.metadata
-
-# 📦 테스트 및 리포트 결과물
-coverage/
-coverage.json
-test-outputs/
-test-temp/
-*.tsbuildinfo
-
-# 📦 Node.js / yarn / pnpm 패키지
+# 👉 Node.js 패키지 (Foundry/Hardhat 등 사용할 경우)
 node_modules/
-.yarn/
-.pnp.*
-pnpm-lock.yaml
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-.pnpm-debug.log
 
-# 📦 Hardhat 프로젝트 사용 시 추가
-hh-cache/
-typechain/
-typechain-types/
+# 👉 테스트 커버리지/레포트 등
+coverage/
+reports/
+*.lcov
 
-# 📦 Foundry (forge) 사용 시 추가
-out/
-lib/
-broadcast/
+# 👉 로그 및 디버깅 출력
+*.log
 
-# 📦 Truffle 프로젝트 사용 시 추가
-build/contracts/
-
-# 📦 Docker 파일 무시 (Docker 쓸 경우)
-docker-compose.override.yml
-
-# 📦 프론트엔드 빌드 결과물 (Next.js, React 등 포함)
-dist/
-.next/
-out/
-.cache/
-
-# 📦 시스템 임시 파일
+# 👉 운영체제 특화 파일
 .DS_Store
 Thumbs.db
 
-# 📦 IDE, 에디터 설정 파일
-.vscode/
-.idea/
+# 👉 편집기/IDE 관련 설정
+/.idea/
+/.vscode/
+/.vscode-test/
+/.project
+/.cproject
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+
+# 👉 백업 파일
+*~
 *.swp
 *.swo
 *.tmp
+*.bak
+*.orig
 
-# 📦 민감 정보 파일 (절대 업로드 금지)
-.env
-.env.*
-secrets/
-*.secrets.json
-private_keys/
+# 👉 실행 파일, 바이너리 파일 (일반적으로 필요 없음)
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.la
+*.lai
 
-# 📦 Git submodules
-modules/
-.gitmodules
+# 👉 Git merge tool 충돌 파일
+*.orig
 
-# 📦 Remix Git 플러그인 설정
-.gitremix/
+# 👉 Emscripten 등 WASM 빌드 환경 사용 시 (필요 시)
+emscripten_build/
+
+# 👉 CMake 등 빌드시스템 잔재 (필요 시)
+/cmake-build-*/
+/CMakeLists.txt.user
+/CMakeSettings.json
+
+# 👉 문서 빌드 산출물 (Sphinx 등)
+/docs/_build/
+/docs/_static/robots.txt
+
+# 👉 기타
+/deps/
