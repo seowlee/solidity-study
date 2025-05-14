@@ -1,69 +1,89 @@
-/commit_hash.txt
-/prerelease.txt
+# ------------------------------------------------------------------------------
+# ✅ Remix IDE 프로젝트 .gitignore (최종 완성 버전)
+# ------------------------------------------------------------------------------
 
-# Auth config for ppa release
-/.release_ppa_auth
+# 📦 컴파일 결과물 (Solidity artifacts, cache)
+artifacts/
+cache/
+bin/
+build/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-*.pyc
-__pycache__/
+# 📦 Remix 플러그인 의존성 캐시 (npm 다운받은 파일들 포함)
+.deps/
 
-# Precompiled Headers
-*.gch
-*.pch
+# 📦 Remixd 공유 파일 (로컬 파일 공유용)
+remixd-files/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# 📦 자동 생성 파일 (컴파일/배포 후 생김)
+*.json
+*.db
+*.log
+*.pid
+*.bak
+*.backup
+*.old
+*.metadata
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# 📦 테스트 및 리포트 결과물
+coverage/
+coverage.json
+test-outputs/
+test-temp/
+*.tsbuildinfo
 
-# ignore git mergetool backup files
-*.orig
+# 📦 Node.js / yarn / pnpm 패키지
+node_modules/
+.yarn/
+.pnp.*
+pnpm-lock.yaml
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
 
-# Executables
-*.exe
-*.out
-*.app
+# 📦 Hardhat 프로젝트 사용 시 추가
+hh-cache/
+typechain/
+typechain-types/
 
-# Build directory
-/cmake-build-*/
-/build*/
-emscripten_build/
-/docs/_build/
-/docs/_static/robots.txt
-/deps/
+# 📦 Foundry (forge) 사용 시 추가
+out/
+lib/
+broadcast/
 
-# Reports and benchmarks
-/reports/
-/benchmarks/
+# 📦 Truffle 프로젝트 사용 시 추가
+build/contracts/
 
-# vim stuff
-[._]*.sw[a-p]
-[._]sw[a-p]
+# 📦 Docker 파일 무시 (Docker 쓸 경우)
+docker-compose.override.yml
 
-# emacs stuff
-*~
+# 📦 프론트엔드 빌드 결과물 (Next.js, React 등 포함)
+dist/
+.next/
+out/
+.cache/
 
-# IDE files
-/.idea/
-/.vscode/
-/browse.VC.db
-/CMakeLists.txt.user
-/CMakeSettings.json
-/.vs
-/.cproject
-/.project
-
-# OS specific local files
+# 📦 시스템 임시 파일
 .DS_Store
 Thumbs.db
+
+# 📦 IDE, 에디터 설정 파일
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# 📦 민감 정보 파일 (절대 업로드 금지)
+.env
+.env.*
+secrets/
+*.secrets.json
+private_keys/
+
+# 📦 Git submodules
+modules/
+.gitmodules
+
+# 📦 Remix Git 플러그인 설정
+.gitremix/
