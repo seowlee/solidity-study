@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-contract MyFirstToken {
+contract SeowooWrappedEther {
     // name, symbol, decimals -> 변수 정의만.
     string public name = "Seowoo Wrapped Ether";
     string public symbol = "swWETH";
