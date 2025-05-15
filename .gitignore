@@ -1,78 +1,88 @@
 # =====================================================
-# ✅ Solidity + Remix + VSCode 프로젝트용 .gitignore
+# ✅ Solidity + Remix + Hardhat + Foundry 확장형 .gitignore
 # =====================================================
 
-# 👉 Remix 상태 파일 (로컬 VM 상태 저장)
+# 📦 Remix 상태 파일 (Remix VM)
 .states/
 
-# 👉 Remix 또는 Hardhat/Foundry 빌드 결과물
+# 📦 Remixd (로컬 Remix 연동 시)
+remixd-files/
+.gitremix/
+
+# 📦 컴파일 결과물 (Solidity artifacts, cache, build)
 artifacts/
 cache/
 build/
+bin/
+out/
+typechain/
+typechain-types/
 
-# 👉 ABI 따로 저장하지 않는다면 포함하지 않음
-*.abi.json
-*.bin
-
-# 👉 Node.js 패키지 (Foundry/Hardhat 등 사용할 경우)
-node_modules/
-
-# 👉 테스트 커버리지/레포트 등
+# 📦 테스트 커버리지 및 출력
 coverage/
-reports/
+coverage.json
 *.lcov
+test-outputs/
+test-temp/
+*.tsbuildinfo
 
-# 👉 로그 및 디버깅 출력
-*.log
+# 📦 하드햇(Hardhat) 캐시 및 출력
+hh-cache/
 
-# 👉 운영체제 특화 파일
+# 📦 트러플(Truffle) 빌드 산출물
+build/contracts/
+
+# 📦 Foundry(lib, broadcast 등)
+lib/
+broadcast/
+forge-cache/
+
+# 📦 패키지 매니저 관련
+node_modules/
+.yarn/
+.pnpm/
+.pnp.*
+pnpm-lock.yaml
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# 📦 운영체제 임시 파일
 .DS_Store
 Thumbs.db
 
-# 👉 편집기/IDE 관련 설정
-/.idea/
-/.vscode/
-/.vscode-test/
-/.project
-/.cproject
-*.code-workspace
-*.sublime-workspace
-*.sublime-project
-
-# 👉 백업 파일
-*~
-*.swp
-*.swo
+# 📦 백업/임시/편집기 파일
+*.log
 *.tmp
 *.bak
 *.orig
+*.swp
+*.swo
+*~
 
-# 👉 실행 파일, 바이너리 파일 (일반적으로 필요 없음)
-*.exe
-*.out
-*.app
-*.dll
-*.so
-*.dylib
-*.a
-*.lib
-*.la
-*.lai
+# 📦 민감 정보 (환경설정, 개인키 등)
+.env
+.env.*
+*.secrets.json
+private_keys/
+secrets/
 
-# 👉 Git merge tool 충돌 파일
-*.orig
+# 📦 IDE/에디터 관련
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+.project
+.cproject
 
-# 👉 Emscripten 등 WASM 빌드 환경 사용 시 (필요 시)
-emscripten_build/
+# 📦 Git 서브모듈 관련
+modules/
+.gitmodules
 
-# 👉 CMake 등 빌드시스템 잔재 (필요 시)
-/cmake-build-*/
-/CMakeLists.txt.user
-/CMakeSettings.json
-
-# 👉 문서 빌드 산출물 (Sphinx 등)
-/docs/_build/
-/docs/_static/robots.txt
-
-# 👉 기타
-/deps/
+# 📦 프론트엔드 빌드 결과물 (확장용)
+dist/
+.next/
+.cache/
+out/
