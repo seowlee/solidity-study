@@ -115,4 +115,27 @@ contract SeowooWrappedEther {
         return true;
     }
 
+    // tokenToEth()
+    function withdraw(uint amount) public returns (bool success) {
+        // amount = account로 보낼 wrapped ether = 받은 ether의 수량  
+        address owner = msg.sender;
+
+        // Token Data update
+         // balances
+        balances[owner] -= amount;
+        // 선택관점에 따라
+        // balances[address(this)] += amount;
+        totalSupply -= amount;
+
+        // (1) withdraw는 토큰을 소각하는 행위
+        // (2) withdraw는 자사주를 매입하는 행위
+        //     withdraw 하면, WETH 자체를 CA가 보유하는 행위.
+        // Ether(CA -> owner)
+        // owner를 payable address type으로 바꾸기
+        payable(owner).transfer(amount);
+        // 이걸 소각 이라 함
+        emit Transfer(owner, address(0x0), amount);
+        return true;
+    }
+
 }
